@@ -1,0 +1,25 @@
+<html lang="de">
+  <head>
+    <title>R2-Dialog - ERP</title>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif|Open+Sans:400,600" rel="stylesheet">
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <base href="/test" />
+  </head>
+  <body class="basex-body" basex-body-classes="page">
+    <section class="basex-page">
+      <header id="main-header" class="r2-main-header" r2-main-header></header>
+
+      <basex-main-menu ng-if="$root.isAuthenticated && !$root.isLoginState" id="main-menu"></basex-main-menu>
+
+      <div class="basex-main-content">
+        <div id="content" class="basex-content ui-view" autoscroll="false"></div>
+      </div>
+
+      <footer id="footer" class="r2-footer"></footer>
+    </section>
+  </body>
+</html>
