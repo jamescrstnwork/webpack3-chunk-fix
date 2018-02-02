@@ -9,10 +9,10 @@ const DEPENDENCIES = [
   'r2dialog.shared'
 ];
 
+console.log('line from r2dialog.erp.ts');
+
 angular.module('r2dialog.erp', DEPENDENCIES);
 
 angular.bootstrap(document, ['r2dialog.erp'], {
   strictDi: true
 });
-
-console.log('line from r2dialog.erp.ts');

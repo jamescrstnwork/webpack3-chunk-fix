@@ -10,9 +10,8 @@ const DEPENDENCIES = [
 
 angular.module('r2dialog.b2b', DEPENDENCIES);
 
+console.log('line from r2dialog.b2b.ts');
+
 angular.bootstrap(document, ['r2dialog.b2b'], {
   strictDi: true
 });
-
-
-console.log('line from r2dialog.b2b.ts');

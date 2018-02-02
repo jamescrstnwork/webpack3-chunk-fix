@@ -1,6 +1,6 @@
 
 import angular = require('angular');
 
-angular.module('basex');
+console.log('line from basex: index.ts');
 
-console.log('line from basex-index.ts');
+angular.module('basex');

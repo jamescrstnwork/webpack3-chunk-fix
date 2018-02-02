@@ -19,12 +19,16 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      chunks: ['vendor', 'basex', 'shared', 'b2b'],
+      // webpack3 html-webpack-plugin chunk ordering
+      // https://github.com/jantimon/html-webpack-plugin/blob/master/examples/sort-manually/webpack.config.js
+      chunksSortMode: 'manual',
+      chunks: ['vendor','basex', 'shared','b2b'],
       filename: 'index.html',
       template: 'index.html'
     }),
     new HtmlWebpackPlugin({
-      chunks: ['vendor', 'basex', 'shared', 'erp'],
+      chunksSortMode: 'manual',
+      chunks: ['vendor','basex', 'shared', 'erp'],
       filename: 'erp.html',
       template: 'erp.html'
     }),
@@ -65,7 +69,7 @@ module.exports = {
       }
     }),
 
-    new BundleAnalyzerPlugin()
+    // new BundleAnalyzerPlugin()
 
   ],
   module: {
