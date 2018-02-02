@@ -50,22 +50,22 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'basex',
       // filename: 'basex.chunk.js',
-      chunks: ["b2b"],
+      chunks: ["b2b", "erp"],
       minChunks: function (module,count) {
         // this assumes your vendor imports exist in the node_modules directory
         console.log('>>>>>>>>basex.chunk.js:: count: ', count,' Resource: ', module.resource );
-        return module.resource && (/basex-core/).test(module.resource) && count === 1;
+        return module.resource && (/basex-core/).test(module.resource) && count === 2;
       }
     }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'shared',
       // filename: 'shared.chunk.js',
-      chunks: ["b2b"],
+      chunks: ["b2b", "erp"],
       minChunks: function (module,count) {
         // this assumes your vendor imports exist in the node_modules directory
         console.log('>>>>>>>>shared.chunk.js:: count: ', count,' Resource: ', module.resource );
         
-        return module.resource && (/shared/).test(module.resource) && count === 1;
+        return module.resource && (/shared/).test(module.resource) && count === 2;
       }
     }),
 
